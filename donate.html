@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>3AM-Yadah-Encounter
+</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="3AM-Yadah-Encounter
+" name="keywords">
+    <meta content="3AM-Yadah-Encounter
+" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+     
+<!-- Navbar Start -->
+<div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+        <!-- Only visible on large screens -->
+        <div class="col-lg-6 px-5 text-start">
+           
+            <small class="ms-4"><i class="fa fa-envelope me-2"></i>3amyadahencounter@gmail.com</small>
+        </div>
+        
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top:15px;">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="fw-bold m-0">
+                <span class="text-line1" style="color: #6F198E;">3AM</span>
+                <span class="text-line2 text-white">Yadah Encounter</span>
+            </h1>
+        </a>
+<style>
+    /* Default styling for larger screens */
+.text-line1, .text-line2 {
+    display: inline;
+}
+
+/* For small screens, make the text break into two lines */
+@media (max-width: 767px) {
+    .text-line1 {
+        display: block;
+    }
+    .text-line2 {
+        display: block;
+    }
+}
+
+</style>        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#prayers" class="nav-item nav-link">Prayer Partners</a>
+                <a href="#prayers" class="nav-item nav-link">Gallery</a>
+                <a href="#prayers" class="nav-item nav-link">Contact</a>
+                <!-- Login and Register Buttons for Small Screens -->
+                <a class="btn btn-outline py-2 px-3 me-2 mt-2 d-lg-none" href="javascript:void(0);" onclick="showModal('Login Successful')" style="outline: #6F198E;">
+                    <i class="fa fa-sign-in-alt me-2"></i>Login
+                </a>
+                <a class="btn btn-outline py-2 px-3 me-2 mt-2 d-lg-none" href="javascript:void(0);" onclick="showModal('Register Successful')" style="outline: #6F198E;">
+                    <i class="fa fa-user-plus me-2"></i>Register
+                </a>
+            </div>
+            <!-- Login and Register Buttons for Large Screens -->
+            <div class="d-none d-lg-flex ms-2">
+                <a class="btn btn-outline py-2 px-3 me-2" href="javascript:void(0);" onclick="showModal('Login Successful')" style="outline: #6F198E;">
+                    <i class="fa fa-sign-in-alt me-2"></i>Login
+                </a>
+                <a class="btn btn-outline py-2 px-3 me-2" href="javascript:void(0);" onclick="showModal('Register Successful')" style="outline: #6F198E;">
+                    <i class="fa fa-user-plus me-2"></i>Register
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+<!-- Modal Start -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Your action was successful!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="removeButtons()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal End -->
+<script>
+    function showModal(message) {
+        // Set the modal title
+        document.getElementById('successModalLabel').textContent = message;
+        
+        // Show the modal
+        var myModal = new bootstrap.Modal(document.getElementById('successModal'));
+        myModal.show();
+    }
+    
+    function removeButtons() {
+        // Remove login and register buttons after modal is closed
+        var loginButtons = document.querySelectorAll('.btn-outline');
+        loginButtons.forEach(function(button) {
+            button.style.display = 'none';
+        });
+    }
+    
+</script>
+
+
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Support</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Support</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+     <!-- Donate Section Start -->
+     <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Donate Now</div>
+                    <h1 class="display-6 mb-5">Your Support Drives Our Impact</h1>
+                    <p class="mb-0" style="color: #000000;">Your generous contributions help us sustain and enhance our platform. We rely on your support to maintain our website, facilitate the development of future apps, and show appreciation to our esteemed guest speakers. Your donations also enable us to organize and offer refreshments during retreats and other special events, creating spaces for growth, reflection, and connection. Together, we can continue to build and grow our community.</p>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100 bg-secondary p-5">
+                        <form>
+                            <div class="row g-3">
+                                <!-- Mpesa Payment Section -->
+                                <div class="col-12 text-center">
+                                    <img src="img/mpesa-removebg-preview.png" alt="Lipa na Mpesa" style="max-width: 200px;">
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-light border-0" id="mpesa" placeholder="Mpesa Number">
+                                        <label for="mpesa">Mpesa Number</label>
+                                    </div>
+                                </div>
+                                <!-- Proceed With Mpesa Button -->
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-primary px-5 w-100" style="height: 60px;" data-bs-toggle="modal" data-bs-target="#paymentModal">
+                                        Proceed With Mpesa
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <!-- Card Payment Section -->
+                                <div class="col-12 text-center">
+                                    <img src="img/card.png" alt="Card Payment" style="max-width: 200px;">
+                                </div>
+                                <!-- Proceed With Card Button -->
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-primary px-5 w-100" style="height: 60px;" data-bs-toggle="modal" data-bs-target="#paymentModal">
+                                        Proceed With Card
+                                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Donate Section End -->
+
+    <!-- Modal Start -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Under Development</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    This functionality is currently under development and will be functional soon. Stay tuned for updates!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+        
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h1 class="fw-bold  mb-4" style="color: #6F198E;">3AM<span class="text-white">Yadah Encounter</span></h1>
+                <p>Connecting believers through prayer and support. Join our community to grow in faith and fellowship.</p>
+                <div class="d-flex pt-2">
+                   <a class="btn btn-square me-1" href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square me-1" href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square me-1" href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square me-0" href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Contact Information</h5>
+                
+                <p><i class="fa fa-envelope me-3"></i>3amyadahencounter@gmail.com</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4" style="text-decoration: dotted;">Quick Links</h5>
+                <a class="btn1 btn-link" href="">Home</a>
+                <a class="btn1 btn-link" href="">Prayer Requests</a>
+                <a class="btn1 btn-link" href="">About Us</a>
+                <a class="btn1 btn-link" href="">Contact Us</a>
+                <a class="btn1 btn-link" href="">Terms & Conditions</a>
+            </div>
+            <style>
+                /* Ensure the buttons are displayed block-level to stack vertically */
+.btn1 {
+    display: block;
+    margin-bottom: 10px; /* Adds space between buttons */
+}
+
+/* Optional: Adjust button styles */
+.btn1.btn-link {
+    text-align: left; /* Align text to the left for a cleaner look */
+}
+
+            </style>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Newsletter</h5>
+                <p>Subscribe to our newsletter for updates and inspirational content.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="#">3AM-YADAH-ENCOUNTER</a>, All Rights Reserved.
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
