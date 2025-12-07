@@ -845,40 +845,54 @@
 </div>
 <!-- About End -->
 
-<!-- Countdown Section Start -->
-<section id="countdown" class="countdown-section position-relative overflow-hidden">
-    <!-- Semi-transparent overlay to ensure text readability -->
-    <div class="content-overlay"></div>
-    
-    <!-- Fireworks Background -->
-    <div class="fireworks-container">
-        <canvas id="fireworksCanvas"></canvas>
-    </div>
-    
-    <!-- Countdown Content -->
-    <div class="container py-5 position-relative z-3" id="event">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-10">
-                <div class="d-inline-block rounded-pill bg-dark bg-opacity-50 py-1 px-3 mb-3 text-white">WORSHIP NIGHT VIGIL</div>
-                <h1 class="display-4 fw-bold text-white mb-2">
-                    <span class="d-block">NAIVASHA</span>
-                    <span class="edition-text">Edition</span>
-                </h1>
-                <p class="lead text-white mb-4">An all-night worship experience from 9:00 PM to 5:00 AM</p>
-                
-                <!-- Countdown Timer -->
-                <div class="countdown-timer mb-5">
-                    <div class="row g-3 justify-content-center">
-                        <div class="col-6 col-sm-3">
-                            <div class="time-card">
-                                <div class="time-value" id="days">--</div>
-                                <div class="time-label">Days</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-3">
-                            <div class="time-card">
-                                <div class="time-value" id="hours">--</div>
-                                <div class="time-label">Hours</div>
+<!-- Events Section Start -->
+<section id="event" class="events-section py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Events & Gatherings</div>
+            <h1 class="display-5 fw-bold mb-3">Our <span class="text-primary">Events</span> Journey</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                From powerful night vigils to fellowship gatherings, each event strengthens our community. 
+                Join us for upcoming events or revisit the blessings from past gatherings.
+            </p>
+        </div>
+
+        <!-- Events Filter -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <div class="filter-container text-center">
+                    <div class="btn-group btn-group-pill" role="group" aria-label="Event filters">
+                        <input type="radio" class="btn-check" name="eventFilter" id="filter-all" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="filter-all">All Events</label>
+                        
+                        <input type="radio" class="btn-check" name="eventFilter" id="filter-past" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="filter-past">Past Events</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid">
+            <!-- Past Events -->
+            <div class="event-category">
+                <h3 class="category-title text-center mb-4">
+                    <span class="pill-badge bg-secondary text-dark">Past Events</span>
+                </h3>
+                <div class="row g-4 justify-content-center">
+                    <!-- Naivasha Kesha -->
+                    <div class="col-lg-4 col-md-6 event-item" data-category="past">
+                        <div class="event-card bubble-card past-event">
+                            <div class="event-thumbnail">
+                                <img src="img/Nairobi.jpeg" alt="Naivasha Kesha" class="img-fluid">
+                                <div class="event-date past">
+                                    <span class="date-day">31</span>
+                                    <span class="date-month">OCT</span>
+                                    <span class="date-year">2024</span>
+                                </div>
+                                <div class="event-status">
+                                    <span class="status-badge">Completed</span>
+                                </div>
                             </div>
                             <div class="event-content">
                                 <div class="event-tags">
@@ -929,7 +943,7 @@
                                     <p><i class="fas fa-users me-2"></i>80+ Members</p>
                                 </div>
                                 <div class="event-actions">
-                                    <a href="#gallery-teambuilding" class="btn btn-outline-primary btn-sm">
+                                    <a href="#gallery" class="btn btn-outline-primary btn-sm">
                                         <i class="fas fa-images me-1"></i>Gallery
                                     </a>
                                     <a href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip" class="btn btn-outline-secondary btn-sm">
@@ -966,7 +980,7 @@
                                     <p><i class="fas fa-users me-2"></i>Online: 150+</p>
                                 </div>
                                 <div class="event-actions">
-                                    <a href="#gallery-other" class="btn btn-outline-primary btn-sm">
+                                    <a href="#gallery" class="btn btn-outline-primary btn-sm">
                                         <i class="fas fa-images me-1"></i>Gallery
                                     </a>
                                     <a href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip" class="btn btn-outline-secondary btn-sm">
@@ -976,9 +990,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+
+                    
 
         <!-- Event Call to Action -->
         <div class="text-center mt-5 pt-4">
@@ -1145,6 +1158,8 @@
     .tag-fellowship { background: rgba(255, 193, 7, 0.1); color: #ffc107; }
     .tag-team { background: rgba(25, 135, 84, 0.1); color: #198754; }
     .tag-fasting { background: rgba(13, 202, 240, 0.1); color: #0dcaf0; }
+    .tag-outreach { background: rgba(13, 110, 253, 0.1); color: #0d6efd; }
+    .tag-community { background: rgba(220, 53, 69, 0.1); color: #dc3545; }
 
     .event-title {
         font-size: 1.25rem;
