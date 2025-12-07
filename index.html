@@ -844,390 +844,500 @@
     </div>
 </div>
 <!-- About End -->
+<!-- Events Section Start -->
+<section id="events" class="events-section py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Events & Gatherings</div>
+            <h1 class="display-5 fw-bold mb-3">Our <span class="text-primary">Events</span> Journey</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                From powerful night vigils to fellowship gatherings, each event strengthens our community. 
+                Join us for upcoming events or revisit the blessings from past gatherings.
+            </p>
+        </div>
 
-<!-- Countdown Section Start -->
-<section id="countdown" class="countdown-section position-relative overflow-hidden">
-    <!-- Semi-transparent overlay to ensure text readability -->
-    <div class="content-overlay"></div>
-    
-    <!-- Fireworks Background -->
-    <div class="fireworks-container">
-        <canvas id="fireworksCanvas"></canvas>
-    </div>
-    
-    <!-- Countdown Content -->
-    <div class="container py-5 position-relative z-3" id="event">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-10">
-                <div class="d-inline-block rounded-pill bg-dark bg-opacity-50 py-1 px-3 mb-3 text-white">WORSHIP NIGHT VIGIL</div>
-                <h1 class="display-4 fw-bold text-white mb-2">
-                    <span class="d-block">NAIVASHA</span>
-                    <span class="edition-text">Edition</span>
-                </h1>
-                <p class="lead text-white mb-4">An all-night worship experience from 9:00 PM to 5:00 AM</p>
-                
-                <!-- Countdown Timer -->
-                <div class="countdown-timer mb-5">
-                    <div class="row g-3 justify-content-center">
-                        <div class="col-6 col-sm-3">
-                            <div class="time-card">
-                                <div class="time-value" id="days">--</div>
-                                <div class="time-label">Days</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-3">
-                            <div class="time-card">
-                                <div class="time-value" id="hours">--</div>
-                                <div class="time-label">Hours</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-3">
-                            <div class="time-card">
-                                <div class="time-value" id="minutes">--</div>
-                                <div class="time-label">Minutes</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-3">
-                            <div class="time-card">
-                                <div class="time-value" id="seconds">--</div>
-                                <div class="time-label">Seconds</div>
-                            </div>
-                        </div>
+        <!-- Events Filter -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <div class="filter-container text-center">
+                    <div class="btn-group btn-group-pill" role="group" aria-label="Event filters">
+                        <input type="radio" class="btn-check" name="eventFilter" id="filter-all" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="filter-all">All Events</label>
+                        
+                        <input type="radio" class="btn-check" name="eventFilter" id="filter-upcoming" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="filter-upcoming">Upcoming</label>
+                        
+                        <input type="radio" class="btn-check" name="eventFilter" id="filter-past" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="filter-past">Past Events</label>
                     </div>
                 </div>
-                
-                <!-- Event Details -->
-                <div class="event-details bg-dark bg-opacity-50 rounded p-4 mb-4">
-                    <div class="row g-3 justify-content-center">
-                        <div class="col-md-5">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <div class="icon-box bg-primary rounded-circle d-flex align-items-center justify-content-center me-3">
-                                    <i class="fas fa-calendar-alt text-white"></i>
+            </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid">
+            
+
+            <!-- Past Events -->
+            <div class="event-category">
+                <h3 class="category-title text-center mb-4">
+                    <span class="pill-badge bg-secondary text-dark">Past Events</span>
+                </h3>
+                <div class="row g-4 justify-content-center">
+                    <!-- Naivasha Kesha -->
+                    <div class="col-lg-4 col-md-6 event-item" data-category="past">
+                        <div class="event-card bubble-card past-event">
+                            <div class="event-thumbnail">
+                                <img src="img/Nairobi.jpeg" alt="Naivasha Kesha" class="img-fluid">
+                                <div class="event-date past">
+                                    <span class="date-day">31</span>
+                                    <span class="date-month">OCT</span>
+                                    <span class="date-year">2024</span>
                                 </div>
-                                <div>
-                                    <h5 class="mb-0 text-white">Date</h5>
-                                    <p class="mb-0 text-white-50">October 31st, 2025</p>
+                                <div class="event-status">
+                                    <span class="status-badge">Completed</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <div class="icon-box bg-primary rounded-circle d-flex align-items-center justify-content-center me-3">
-                                    <i class="fas fa-clock text-white"></i>
+                            <div class="event-content">
+                                <div class="event-tags">
+                                    <span class="event-tag tag-kesha">Kesha</span>
+                                    <span class="event-tag tag-worship">Worship</span>
                                 </div>
-                                <div>
-                                    <h5 class="mb-0 text-white">Time</h5>
-                                    <p class="mb-0 text-white-50">9:00 PM - 5:00 AM</p>
+                                <h4 class="event-title">Nairobi Worship Night Vigil</h4>
+                                <p class="event-description">An all-night worship experience from 9:00 PM to 5:00 AM in Naivasha. Powerful testimonies and breakthroughs.</p>
+                                <div class="event-details">
+                                    <p><i class="fas fa-check-circle me-2 text-success"></i>Successfully Completed</p>
+                                    <p><i class="fas fa-users me-2"></i>250+ Attendees</p>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="#gallery" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-images me-1"></i>Gallery
+                                    </a>
+                                    <a href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip" class="btn btn-outline-secondary btn-sm">
+                                        <i class="fas fa-play-circle me-1"></i>Videos
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Team Building -->
+                    <div class="col-lg-4 col-md-6 event-item" data-category="past">
+                        <div class="event-card bubble-card past-event">
+                            <div class="event-thumbnail">
+                                <img src="img/team.jpeg" alt="Team Building" class="img-fluid">
+                                <div class="event-date past">
+                                    <span class="date-day">06</span>
+                                    <span class="date-month">DEC</span>
+                                    <span class="date-year">2024</span>
+                                </div>
+                                <div class="event-status">
+                                    <span class="status-badge">Completed</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-tags">
+                                    <span class="event-tag tag-fellowship">Fellowship</span>
+                                    <span class="event-tag tag-team">Team Building</span>
+                                </div>
+                                <h4 class="event-title">Annual Team Building Fellowship</h4>
+                                <p class="event-description">A day of bonding, games, prayer, and strategic planning for the ministry's vision and goals.</p>
+                                <div class="event-details">
+                                    <p><i class="fas fa-check-circle me-2 text-success"></i>Successfully Completed</p>
+                                    <p><i class="fas fa-users me-2"></i>80+ Members</p>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="#gallery-teambuilding" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-images me-1"></i>Gallery
+                                    </a>
+                                    <a href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip" class="btn btn-outline-secondary btn-sm">
+                                        <i class="fas fa-play-circle me-1"></i>Videos
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Monthly Fasting -->
+                    <div class="col-lg-4 col-md-6 event-item" data-category="past">
+                        <div class="event-card bubble-card past-event">
+                            <div class="event-thumbnail">
+                                <img src="https://portlaoise.lifechurch.ie/wp-content/uploads/2020/03/157-1577499_3-days-of-prayer-pngkey.jpg" alt="Monthly Fasting" class="img-fluid">
+                                <div class="event-date past">
+                                    <span class="date-day">01-03</span>
+                                    <span class="date-month">DEC</span>
+                                    <span class="date-year">2024</span>
+                                </div>
+                                <div class="event-status">
+                                    <span class="status-badge">Completed</span>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-tags">
+                                    <span class="event-tag tag-fasting">Fasting</span>
+                                    <span class="event-tag tag-prayer">Prayer</span>
+                                </div>
+                                <h4 class="event-title">Monthly 3-Day Fasting & Prayer</h4>
+                                <p class="event-description">First week monthly fasting with online prayer sessions and powerful testimonies of deliverance.</p>
+                                <div class="event-details">
+                                    <p><i class="fas fa-check-circle me-2 text-success"></i>Successfully Completed</p>
+                                    <p><i class="fas fa-users me-2"></i>Online: 150+</p>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="#gallery-other" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-images me-1"></i>Gallery
+                                    </a>
+                                    <a href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip" class="btn btn-outline-secondary btn-sm">
+                                        <i class="fas fa-play-circle me-1"></i>Testimonies
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Join Button -->
-                <a href="https://chat.whatsapp.com/JfDJRHbyT8NIgMivX0XPip" class="btn btn-primary btn-lg px-5 py-3 join-btn">
-                    <i class="fab fa-whatsapp me-2"></i> Join Us on WhatsApp
+            </div>
+        </div>
+
+        <!-- Event Call to Action -->
+        <div class="text-center mt-5 pt-4">
+            <div class="cta-card p-4 p-md-5 rounded shadow-sm" style="background: linear-gradient(135deg, #6F198E, #4a1065);">
+                <h3 class="text-white mb-3">Want to Host or Partner on an Event?</h3>
+                <p class="text-white-50 mb-4">We're open to collaborations for worship nights, prayer conferences, and community outreach programs.</p>
+                <a href="#contact" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-handshake me-2"></i>Partner With Us
                 </a>
             </div>
         </div>
     </div>
 </section>
-<!-- Countdown Section End -->
+<!-- Events Section End -->
 
 <style>
-    /* Countdown Section Styles */
-    .countdown-section {
-        background: #1a0b2e; /* Single deep purple color */
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
+    /* Events Section Styles */
+    .events-section {
+        background: linear-gradient(135deg, #f9f9ff 0%, #ffffff 100%);
+    }
+
+    /* Filter Button Group */
+    .btn-group-pill {
+        border-radius: 50px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-group-pill .btn {
+        border-radius: 0;
+        padding: 10px 25px;
+        border: 1px solid #6F198E;
+    }
+
+    .btn-group-pill .btn:first-child {
+        border-radius: 50px 0 0 50px;
+    }
+
+    .btn-group-pill .btn:last-child {
+        border-radius: 0 50px 50px 0;
+    }
+
+    .btn-group-pill .btn-check:checked + .btn {
+        background-color: #6F198E;
+        color: white;
+        border-color: #6F198E;
+    }
+
+    /* Event Cards */
+    .bubble-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        height: 100%;
+        border: 1px solid rgba(111, 25, 142, 0.1);
+    }
+
+    .bubble-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(111, 25, 142, 0.15);
+    }
+
+    .event-thumbnail {
         position: relative;
+        height: 200px;
         overflow: hidden;
     }
-    
-    /* Content overlay for better text readability */
-    .content-overlay {
+
+    .event-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .bubble-card:hover .event-thumbnail img {
+        transform: scale(1.05);
+    }
+
+    .event-date {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(26, 11, 46, 0.7); /* Semi-transparent overlay */
-        z-index: 2; /* Above fireworks but below content */
-        pointer-events: none; /* Allow clicks to pass through */
+        top: 15px;
+        left: 15px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 8px 12px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
-    
-    /* Fireworks Container */
-    .fireworks-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1; /* Behind the overlay and content */
-        pointer-events: none;
+
+    .event-date.past {
+        background: rgba(108, 117, 125, 0.95);
+        color: white;
     }
-    
-    #fireworksCanvas {
-        width: 100%;
-        height: 100%;
-    }
-    
-    /* Title Styling */
-    .edition-text {
-        font-family: 'Georgia', serif;
-        font-style: italic;
-        font-weight: 300;
-        font-size: 2.5rem;
+
+    .date-day {
         display: block;
-        margin-top: -10px;
-    }
-    
-    /* Countdown Timer Styles */
-    .countdown-timer {
-        max-width: 700px;
-        margin: 0 auto;
-    }
-    
-    .time-card {
-        background: rgba(111, 25, 142, 0.5); /* Primary color with transparency */
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        padding: 25px 10px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.3s ease;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-    
-    .time-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-        background: rgba(111, 25, 142, 0.6);
-    }
-    
-    .time-value {
-        font-size: 3.5rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        color: #fff;
-        text-shadow: 0 0 15px rgba(111, 25, 142, 0.9);
         line-height: 1;
-        margin-bottom: 5px;
-        font-family: 'Arial', sans-serif;
+        color: #6F198E;
     }
-    
-    .time-label {
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.9);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 500;
+
+    .event-date.past .date-day {
+        color: white;
     }
-    
-    /* Join Button Styles */
-    .join-btn {
-        background: #6F198E; /* Primary purple color */
-        border: none;
-        border-radius: 50px;
+
+    .date-month {
+        display: block;
+        font-size: 0.85rem;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(111, 25, 142, 0.5);
+    }
+
+    .date-year {
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.8;
+    }
+
+    .event-status {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .status-badge {
+        background: #28a745;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .event-content {
+        padding: 25px;
+    }
+
+    .event-tags {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+    }
+
+    .event-tag {
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .tag-prayer { background: rgba(111, 25, 142, 0.1); color: #6F198E; }
+    .tag-conference { background: rgba(253, 126, 20, 0.1); color: #fd7e14; }
+    .tag-youth { background: rgba(32, 201, 151, 0.1); color: #20c997; }
+    .tag-revival { background: rgba(220, 53, 69, 0.1); color: #dc3545; }
+    .tag-kesha { background: rgba(13, 110, 253, 0.1); color: #0d6efd; }
+    .tag-worship { background: rgba(111, 66, 193, 0.1); color: #6f42c1; }
+    .tag-fellowship { background: rgba(255, 193, 7, 0.1); color: #ffc107; }
+    .tag-team { background: rgba(25, 135, 84, 0.1); color: #198754; }
+    .tag-fasting { background: rgba(13, 202, 240, 0.1); color: #0dcaf0; }
+
+    .event-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #333;
+        line-height: 1.3;
+    }
+
+    .event-description {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .event-details p {
+        font-size: 0.85rem;
+        color: #777;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .event-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .category-title {
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .category-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #6F198E, transparent);
+    }
+
+    .pill-badge {
+        padding: 8px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        display: inline-block;
+    }
+
+    /* CTA Card */
+    .cta-card {
         position: relative;
         overflow: hidden;
-        z-index: 3; /* Ensure button is above everything */
     }
-    
-    .join-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(111, 25, 142, 0.7);
-        background: #7d1fa3;
+
+    .cta-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.3;
+        transform: rotate(30deg);
     }
-    
-    /* Icon Box Styles */
-    .icon-box {
-        width: 50px;
-        height: 50px;
-        flex-shrink: 0;
-    }
-    
-    /* Ensure content is above the overlay */
-    .container {
-        z-index: 3;
-        position: relative;
-    }
-    
-    /* Text shadow for better readability */
-    .text-white {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    
+
     /* Responsive Adjustments */
     @media (max-width: 768px) {
-        .time-value {
-            font-size: 2.5rem;
+        .btn-group-pill {
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
         }
-        
-        .display-4 {
-            font-size: 2.5rem;
+
+        .btn-group-pill .btn {
+            border-radius: 0;
+            border: 1px solid #6F198E;
         }
-        
-        .edition-text {
-            font-size: 1.8rem;
+
+        .btn-group-pill .btn:first-child {
+            border-radius: 12px 12px 0 0;
         }
-        
-        .join-btn {
-            padding: 12px 30px;
-            font-size: 1rem;
+
+        .btn-group-pill .btn:last-child {
+            border-radius: 0 0 12px 12px;
         }
-        
-        .content-overlay {
-            background: rgba(26, 11, 46, 0.8); /* Darker overlay on mobile for better readability */
+
+        .event-thumbnail {
+            height: 180px;
         }
-    }
-    
-    @media (max-width: 576px) {
-        .time-value {
-            font-size: 2rem;
+
+        .event-content {
+            padding: 20px;
         }
-        
-        .time-label {
-            font-size: 0.8rem;
+
+        .event-actions {
+            flex-direction: column;
         }
-        
-        .display-4 {
-            font-size: 2rem;
-        }
-        
-        .edition-text {
-            font-size: 1.5rem;
+
+        .event-actions .btn {
+            width: 100%;
         }
     }
 </style>
 
 <script>
-    // Realistic Fireworks Animation
+    // Events Filter Functionality
     document.addEventListener('DOMContentLoaded', function() {
-        const canvas = document.getElementById('fireworksCanvas');
-        const ctx = canvas.getContext('2d');
-        
-        // Set canvas size
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-        
-        // Firework particles
-        const particles = [];
-        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ffffff'];
-        
-        // Particle class
-        class Particle {
-            constructor(x, y, color) {
-                this.x = x;
-                this.y = y;
-                this.color = color;
-                this.velocity = {
-                    x: (Math.random() - 0.5) * 8,
-                    y: (Math.random() - 0.5) * 8
-                };
-                this.alpha = 1;
-                this.decay = Math.random() * 0.02 + 0.01;
-                this.size = Math.random() * 2 + 1;
-            }
-            
-            update() {
-                this.velocity.y += 0.05; // Gravity
-                this.x += this.velocity.x;
-                this.y += this.velocity.y;
-                this.alpha -= this.decay;
-                this.size *= 0.99;
-            }
-            
-            draw() {
-                ctx.globalAlpha = this.alpha;
-                ctx.fillStyle = this.color;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-        
-        // Create firework explosion
-        function createFirework(x, y) {
-            const color = colors[Math.floor(Math.random() * colors.length)];
-            const particleCount = 100;
-            
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle(x, y, color));
-            }
-        }
-        
-        // Animation loop
-        function animate() {
-            // Use a more transparent background to keep fireworks visible but not overwhelming
-            ctx.fillStyle = 'rgba(26, 11, 46, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            // Update and draw particles
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-                
-                // Remove dead particles
-                if (particles[i].alpha <= 0) {
-                    particles.splice(i, 1);
-                    i--;
+        const filterButtons = document.querySelectorAll('input[name="eventFilter"]');
+        const eventItems = document.querySelectorAll('.event-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('change', function() {
+                const filterValue = this.id.replace('filter-', '');
+
+                eventItems.forEach(item => {
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const itemCategory = item.getAttribute('data-category');
+                        if (itemCategory === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+
+                // Add animation to visible items
+                setTimeout(() => {
+                    eventItems.forEach(item => {
+                        if (item.style.display === 'block') {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            
+                            setTimeout(() => {
+                                item.style.transition = 'all 0.5s ease';
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 50);
+                        }
+                    });
+                }, 10);
+            });
+        });
+
+        // Initialize animation for event cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
-            }
-            
-            // Randomly create new fireworks (less frequent)
-            if (Math.random() < 0.02) {
-                createFirework(
-                    Math.random() * canvas.width,
-                    Math.random() * canvas.height * 0.6
-                );
-            }
-            
-            requestAnimationFrame(animate);
-        }
-        
-        // Start animation
-        animate();
-        
-        // COUNTDOWN TIMER - FIXED USING YOUR WORKING APPROACH
-        // Target: October 31, 2025 at 9:00 PM (21:00)
-        // October = month 9 (0-indexed), so 2025, 9, 31, 21, 0, 0
-        const targetDate = new Date(2025, 9, 31, 21, 0, 0);
+            });
+        }, observerOptions);
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const diff = targetDate.getTime() - now;
-
-            if (diff <= 0) {
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-                return;
-            }
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+        // Apply initial animation state
+        eventItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'all 0.5s ease';
+            observer.observe(item);
+        });
     });
 </script>
 
@@ -1481,161 +1591,597 @@
 </script>
 
 
-<!-- Gallery Section Start -->
+<!-- Enhanced Gallery Section Start -->
 <section id="gallery" class="gallery-section py-5">
     <div class="container py-5">
         <div class="text-center mb-5">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Journey</div>
-            <h1 class="display-5 fw-bold mb-3">Moments & Memories</h1>
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Gallery</div>
+            <h1 class="display-5 fw-bold mb-3">Moments & <span class="text-primary">Memories</span></h1>
             <p class="lead text-muted mx-auto" style="max-width: 700px;">
-                Through prayer, worship, and fellowship, we've created cherished memories. 
-                Our gallery captures the spirit of our 3AM Yadah Encounter journey - the powerful moments, 
-                divine connections, and transformative experiences we've shared together in God's presence.
+                Relive the powerful moments from our events through photos and videos. 
+                Each gallery tells a story of God's faithfulness and the unity of our community.
             </p>
         </div>
-        
-        <!-- Gallery Container -->
-        <div class="gallery-container mt-5">
-            <!-- Top Row Container (moving right to left) -->
-            <div class="gallery-row-wrapper mb-4">
-                <div class="gallery-track top-row">
-                    <div class="gallery-item">
-                        <img src="img/pass1.JPG" alt="Prayer gathering at 3AM">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Night Vigil Prayer</div>
+
+        <!-- Gallery Tabs -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <ul class="nav nav-pills justify-content-center gallery-tabs" id="galleryTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="naivasha-tab" data-bs-toggle="pill" data-bs-target="#naivasha" type="button">
+                            <i class="fas fa-mountain me-2"></i>Naivasha Kesha
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="teambuilding-tab" data-bs-toggle="pill" data-bs-target="#teambuilding" type="button">
+                            <i class="fas fa-users me-2"></i>Team Building
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="other-tab" data-bs-toggle="pill" data-bs-target="#other" type="button">
+                            <i class="fas fa-star me-2"></i>Other Events
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="videos-tab" data-bs-toggle="pill" data-bs-target="#videos" type="button">
+                            <i class="fas fa-video me-2"></i>Videos
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Enhanced Gallery Section Start -->
+<section id="gallery" class="gallery-section py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Gallery</div>
+            <h1 class="display-5 fw-bold mb-3">Moments & <span class="text-primary">Memories</span></h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                Relive the powerful moments from our events through photos and videos. 
+                Each gallery tells a story of God's faithfulness and the unity of our community.
+            </p>
+        </div>
+
+        <!-- Gallery Tabs -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <ul class="nav nav-pills justify-content-center gallery-tabs" id="galleryTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="naivasha-tab" data-bs-toggle="pill" data-bs-target="#naivasha" type="button">
+                            <i class="fas fa-mountain me-2"></i>Naivasha Kesha
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="teambuilding-tab" data-bs-toggle="pill" data-bs-target="#teambuilding" type="button">
+                            <i class="fas fa-users me-2"></i>Team Building
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="other-tab" data-bs-toggle="pill" data-bs-target="#other" type="button">
+                            <i class="fas fa-star me-2"></i>Other Events
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="videos-tab" data-bs-toggle="pill" data-bs-target="#videos" type="button">
+                            <i class="fas fa-video me-2"></i>Videos
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gallery Content -->
+        <div class="tab-content" id="galleryTabsContent">
+            <!-- Naivasha Kesha Gallery -->
+            <div class="tab-pane fade show active" id="naivasha" role="tabpanel">
+                <div class="gallery-container">
+                    <h4 class="gallery-subtitle text-center mb-4">Naivasha Worship Night Vigil - October 31, 2024</h4>
+                    
+                    <!-- Top Row Container (moving right to left) -->
+                    <div class="gallery-row-wrapper mb-4">
+                        <div class="gallery-track top-row">
+                            <!-- Images for Naivasha Kesha - Top Row -->
+                            <div class="gallery-item">
+                                <img src="img/n1.jpeg" alt="Naivasha worship night">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Night Worship</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n3.jpeg" alt="Prayer at Naivasha">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Prayer Altar</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n7.jpeg" alt="Testimony time">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Testimonies</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n12.jpeg" alt="Fellowship">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Fellowship</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n10.jpeg" alt="Breakthrough moments">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Breakthrough</div>
+                                </div>
+                            </div>
+                            <!-- Duplicates for seamless loop -->
+                            <div class="gallery-item">
+                                <img src="img/n5.jpeg" alt="Naivasha worship night">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Night Worship</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n16.jpeg" alt="Prayer at Naivasha">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Prayer Altar</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/3am1.JPG" alt="Worship session">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Powerful Worship</div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/3am10.JPG" alt="Bible study moment">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Word Study</div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/3am11.JPG" alt="Fellowship moment">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Brotherhood Fellowship</div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/praise.JPG" alt="Praise celebration">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Celebration Praise</div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/cake.JPG" alt="Group prayer">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Group Intercession</div>
-                        </div>
-                    </div>
-                    <!-- Duplicates for seamless loop -->
-                    <div class="gallery-item">
-                        <img src="img/3am13.JPG" alt="Prayer gathering at 3AM">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Night Vigil Prayer</div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/3am12.JPG" alt="Worship session">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Powerful Worship</div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/3am5.JPG" alt="Bible study moment">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Word Study</div>
+                    
+                    <!-- Bottom Row Container (moving left to right) -->
+                    <div class="gallery-row-wrapper">
+                        <div class="gallery-track bottom-row">
+                            <!-- Images for Naivasha Kesha - Bottom Row -->
+                            <div class="gallery-item">
+                                <img src="img/n1.jpeg" alt="Worship team">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Worship Team</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n2.jpeg" alt="Morning session">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Morning Prayer</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n3.jpeg" alt="Group photo">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Group Photo</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n4.jpeg" alt="Teaching session">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Teaching</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n5.jpeg" alt="Healing prayer">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Healing Prayer</div>
+                                </div>
+                            </div>
+                            <!-- Duplicates for seamless loop -->
+                            <div class="gallery-item">
+                                <img src="img/n6.jpeg" alt="Worship team">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Worship Team</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/n7.jpeg" alt="Morning session">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Morning Prayer</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Bottom Row Container (moving left to right) -->
-            <div class="gallery-row-wrapper">
-                <div class="gallery-track bottom-row">
-                    <div class="gallery-item">
-                        <img src="img/3am8.JPG" alt="Faith moment">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Faith in Action</div>
+
+            <!-- Team Building Gallery -->
+            <div class="tab-pane fade" id="teambuilding" role="tabpanel">
+                <div class="gallery-container">
+                    <h4 class="gallery-subtitle text-center mb-4">Team Building Fellowship - December 6, 2024</h4>
+                    
+                    <!-- Top Row Container (moving right to left) -->
+                    <div class="gallery-row-wrapper mb-4">
+                        <div class="gallery-track top-row">
+                            <!-- Images for Team Building - Top Row -->
+                            <div class="gallery-item">
+                                <img src="img/team.jpeg" alt="Team building games">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Team Games</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/t2.jpeg" alt="Group discussion">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Strategy</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/t3.jpeg" alt="Prayer time">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Group Prayer</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/team1.jpeg" alt="Fellowship meal">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Fellowship Meal</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://mindtrip.ai/attractions/155b/9a5b/db39/ac01/dc85/b92a/e0e6/efba" alt="Awards ceremony">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Awards</div>
+                                </div>
+                            </div>
+                            <!-- Duplicates for seamless loop -->
+                            <div class="gallery-item">
+                                <img src="https://twendesasa.com/wp-content/uploads/2023/03/Nairobi-Arboretum-Park-768x480-1.jpg" alt="Team building games">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Team Games</div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/3am2.JPG" alt="Healing prayer">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Healing Service</div>
+                    
+                    <!-- Bottom Row Container (moving left to right) -->
+                    <div class="gallery-row-wrapper">
+                        <div class="gallery-track bottom-row">
+                            <!-- Images for Team Building - Bottom Row -->
+                            <div class="gallery-item">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJa1qjigJmnqiJq2mfNFgpy8CZLVL4whPBQ&s" alt="Planning session">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Planning</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/67/9a/c3/photo6jpg.jpg?w=900&h=500&s=1" alt="Team exercises">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Exercises</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJIxYUXTI5V6phevL7Bh3_kyQi7zS8I9WfLQ&s" alt="Bonding activities">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Bonding</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://sunsetexperiencetours.com/wp-content/uploads/2022/03/1620712276-68255440_2110421002396700_5491474583993188352_n.jpg" alt="Leadership talk">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Leadership</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://utaliibora.wordpress.com/wp-content/uploads/2017/09/nairobi_arboretum.jpg" alt="Group photo">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Group Photo</div>
+                                </div>
+                            </div>
+                            <!-- Duplicates for seamless loop -->
+                            <div class="gallery-item">
+                                <img src="https://www.maasaimarakenyapark.com/wp-content/uploads/2023/05/karura-natural-river.jpg" alt="Planning session">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Planning</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://live.staticflickr.com/65535/51966900096_1aa50f9c97_z.jpg" alt="Team exercises">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Exercises</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/3am7.JPG" alt="Testimony sharing">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Testimony Time</div>
+                </div>
+            </div>
+
+            <!-- Other Events Gallery -->
+            <div class="tab-pane fade" id="other" role="tabpanel">
+                <div class="gallery-container">
+                    <h4 class="gallery-subtitle text-center mb-4">Other Events & Gatherings</h4>
+                    
+                    <!-- Top Row Container (moving right to left) -->
+                    <div class="gallery-row-wrapper mb-4">
+                        <div class="gallery-track top-row">
+                            <!-- Images for Other Events - Top Row -->
+                            <div class="gallery-item">
+                                <img src="img/Nairobi.jpeg" alt="Monthly fasting">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Fasting Prayer</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/team.jpeg" alt="Online prayer">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Virtual Gathering</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event3.jpg" alt="Community outreach">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Outreach</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event4.jpg" alt="Bible study">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Bible Study</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event5.jpg" alt="Prayer walk">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Prayer Walk</div>
+                                </div>
+                            </div>
+                            <!-- Duplicates for seamless loop -->
+                            <div class="gallery-item">
+                                <img src="img/event1.jpg" alt="Monthly fasting">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Fasting Prayer</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event2.jpg" alt="Online prayer">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Virtual Gathering</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/3am6.JPG" alt="Breakthrough moment">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Breakthrough Night</div>
+                    
+                    <!-- Bottom Row Container (moving left to right) -->
+                    <div class="gallery-row-wrapper">
+                        <div class="gallery-track bottom-row">
+                            <!-- Images for Other Events - Bottom Row -->
+                            <div class="gallery-item">
+                                <img src="img/event6.jpg" alt="Youth meeting">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Youth Meeting</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event7.jpg" alt="Prayer chains">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Prayer Chains</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event8.jpg" alt="Worship practice">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Worship Practice</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event9.jpg" alt="Leadership meeting">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Leadership</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event10.jpg" alt="Community service">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Community Service</div>
+                                </div>
+                            </div>
+                            <!-- Duplicates for seamless loop -->
+                            <div class="gallery-item">
+                                <img src="img/event6.jpg" alt="Youth meeting">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Youth Meeting</div>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="img/event7.jpg" alt="Prayer chains">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-caption">Prayer Chains</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/3am16.JPG" alt="Unity in worship">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Unity in Spirit</div>
+                </div>
+            </div>
+
+            <!-- Videos Gallery -->
+            <div class="tab-pane fade" id="videos" role="tabpanel">
+                <div class="gallery-container">
+                    <h4 class="gallery-subtitle text-center mb-4">Video Highlights & Testimonies</h4>
+                    <div class="row g-4">
+                        <!-- Video 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="img/video-thumb1.jpg" alt="Worship highlights">
+                                    <div class="video-play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">4:32</div>
+                                </div>
+                                <div class="video-info">
+                                    <h5>Naivasha Worship Highlights</h5>
+                                    <p>Best moments from the night vigil</p>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i>Oct 31, 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Video 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="img/video-thumb2.jpg" alt="Testimonies">
+                                    <div class="video-play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">8:15</div>
+                                </div>
+                                <div class="video-info">
+                                    <h5>Powerful Testimonies</h5>
+                                    <p>Miracles and breakthroughs shared</p>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i>Dec 6, 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Video 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="img/video-thumb3.jpg" alt="Teaching moments">
+                                    <div class="video-play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">15:42</div>
+                                </div>
+                                <div class="video-info">
+                                    <h5>Teaching Session</h5>
+                                    <p>Powerful word on prayer and faith</p>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i>Nov 15, 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Video 4 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="img/video-thumb4.jpg" alt="Team building highlights">
+                                    <div class="video-play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">6:18</div>
+                                </div>
+                                <div class="video-info">
+                                    <h5>Team Building Highlights</h5>
+                                    <p>Fun moments and bonding activities</p>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i>Dec 6, 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Video 5 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="img/video-thumb5.jpg" alt="Prayer session">
+                                    <div class="video-play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">12:45</div>
+                                </div>
+                                <div class="video-info">
+                                    <h5>Prayer Session</h5>
+                                    <p>Powerful corporate prayer moments</p>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i>Nov 22, 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Video 6 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="img/video-thumb6.jpg" alt="Testimony miracles">
+                                    <div class="video-play-btn">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="video-duration">10:30</div>
+                                </div>
+                                <div class="video-info">
+                                    <h5>Miracle Testimonies</h5>
+                                    <p>God's faithfulness in our midst</p>
+                                    <small class="text-muted"><i class="fas fa-calendar me-1"></i>Dec 1, 2024</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="img/3am10.JPG" alt="Revival fire">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Revival Fire</div>
-                        </div>
-                    </div>
-                    <!-- Duplicates for seamless loop -->
-                    <div class="gallery-item">
-                        <img src="img/cong2.JPG" alt="Faith moment">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Faith in Action</div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/cong1.JPG" alt="Healing prayer">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Healing Service</div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="img/3am8.JPG" alt="Testimony sharing">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Testimony Time</div>
+                    
+                    <!-- Video Upload Section -->
+                    <div class="video-upload-section mt-5 p-4 rounded" style="background: #f8f9fa; border: 2px dashed #6F198E;">
+                        <div class="text-center">
+                            <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
+                            <h4>Share Your Video Testimonies</h4>
+                            <p class="text-muted mb-4">Upload your video testimonies from our events to encourage others</p>
+                            <div class="upload-area" id="videoUploadArea">
+                                <input type="file" id="videoUpload" accept="video/*" style="display: none;">
+                                <label for="videoUpload" class="btn btn-primary px-4">
+                                    <i class="fas fa-upload me-2"></i>Choose Video File
+                                </label>
+                                <p class="small text-muted mt-2">Max file size: 100MB | Supported: MP4, MOV, AVI</p>
+                            </div>
+                            <div id="uploadProgress" class="mt-3" style="display: none;">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                                </div>
+                                <small class="text-muted mt-2" id="uploadStatus">Uploading...</small>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="text-center mt-5">
-            <p class="text-muted">Scroll horizontally or pause on images to view details</p>
+            <p class="text-muted">Have more photos or videos to share? Join our WhatsApp group for updates</p>
             <a href="https://chat.whatsapp.com/JGq8EKGuK0cElkZ0bn1Jur?mode=ems_wa_c" class="btn btn-primary mt-3">
-                <i class="fab fa-whatsapp me-2"></i>Join Us to Create More Memories
+                <i class="fab fa-whatsapp me-2"></i>Join Our Media Group
             </a>
         </div>
     </div>
 </section>
-<!-- Gallery Section End -->
+<!-- Enhanced Gallery Section End -->
 
 <style>
-    .gallery-section {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        overflow: hidden;
-        position: relative;
+    /* Enhanced Gallery Styles - RESTORED ORIGINAL SLIDER LAYOUT */
+    .gallery-tabs {
+        border-bottom: none;
+        margin-bottom: 30px;
     }
-    
+
+    .gallery-tabs .nav-link {
+        border-radius: 50px;
+        padding: 10px 25px;
+        margin: 0 5px;
+        color: #666;
+        font-weight: 600;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .gallery-tabs .nav-link:hover {
+        border-color: #6F198E;
+        color: #6F198E;
+    }
+
+    .gallery-tabs .nav-link.active {
+        background: linear-gradient(135deg, #6F198E, #4a1065);
+        color: white;
+        border-color: #6F198E;
+        box-shadow: 0 5px 15px rgba(111, 25, 142, 0.3);
+    }
+
+    .gallery-subtitle {
+        color: #333;
+        font-weight: 600;
+        padding-bottom: 15px;
+        position: relative;
+        margin-bottom: 2rem !important;
+    }
+
+    .gallery-subtitle::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: #6F198E;
+    }
+
+    /* RESTORED ORIGINAL GALLERY LAYOUT */
     .gallery-container {
         position: relative;
         width: 100%;
@@ -1733,9 +2279,109 @@
     .gallery-row-wrapper:hover .gallery-track {
         animation-play-state: paused;
     }
-    
-    /* Responsive adjustments */
+
+    /* Video Card Styles */
+    .video-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        height: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(111, 25, 142, 0.15);
+    }
+
+    .video-thumbnail {
+        position: relative;
+        height: 180px;
+        overflow: hidden;
+    }
+
+    .video-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .video-play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6F198E;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .video-card:hover .video-play-btn {
+        background: #6F198E;
+        color: white;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .video-duration {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 0.75rem;
+    }
+
+    .video-info {
+        padding: 15px;
+    }
+
+    .video-info h5 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .video-info p {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    /* Upload Area */
+    .upload-area {
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .upload-area:hover {
+        transform: scale(1.02);
+    }
+
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
+        .gallery-tabs .nav-link {
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            margin: 2px;
+        }
+
+        .gallery-subtitle {
+            font-size: 1.1rem;
+        }
+        
         .gallery-row-wrapper {
             height: 180px;
             margin-bottom: 20px;
@@ -1753,47 +2399,209 @@
         .bottom-row {
             animation-duration: 25s;
         }
+
+        .video-card {
+            margin-bottom: 20px;
+        }
+
+        .video-upload-section {
+            padding: 20px 15px !important;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .gallery-tabs {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-tabs .nav-item {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .gallery-tabs .nav-link {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .gallery-row-wrapper {
+            height: 150px;
+        }
+        
+        .gallery-item {
+            width: 220px;
+            height: 140px;
+        }
+        
+        .top-row,
+        .bottom-row {
+            animation-duration: 20s;
+        }
     }
 </style>
 
 <script>
-    // JavaScript to enhance gallery functionality
+    // Enhanced Gallery Functionality
     document.addEventListener('DOMContentLoaded', function() {
-        const galleryItems = document.querySelectorAll('.gallery-item');
+        // Gallery tabs animation
+        const galleryTabs = document.querySelectorAll('#galleryTabs .nav-link');
         
-        // Add click effect to gallery items
-        galleryItems.forEach(item => {
-            item.addEventListener('click', function() {
-                this.classList.toggle('gallery-item-active');
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('shown.bs.tab', function() {
+                // Restart animations when tab changes
+                const activeTab = this.getAttribute('data-bs-target');
+                const galleryTracks = document.querySelectorAll(`${activeTab} .gallery-track`);
+                
+                galleryTracks.forEach(track => {
+                    track.style.animationPlayState = 'running';
+                });
+                
+                // Reset video section if needed
+                if (activeTab === '#videos') {
+                    initVideoSection();
+                }
             });
         });
-        
-        // Adjust animation speed based on container width
-        function adjustAnimationSpeed() {
-            const windowWidth = window.innerWidth;
-            const topRow = document.querySelector('.top-row');
-            const bottomRow = document.querySelector('.bottom-row');
-            
-            if (windowWidth < 768) {
-                topRow.style.animationDuration = '30s';
-                bottomRow.style.animationDuration = '25s';
-            } else {
-                topRow.style.animationDuration = '40s';
-                bottomRow.style.animationDuration = '35s';
-            }
+
+        // Video play functionality
+        function initVideoSection() {
+            const videoPlayButtons = document.querySelectorAll('.video-play-btn');
+            videoPlayButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const videoCard = this.closest('.video-card');
+                    const videoTitle = videoCard.querySelector('h5').textContent;
+                    
+                    // In a real implementation, this would open a modal with the video player
+                    // For now, we'll just show an alert
+                    alert(`Playing: ${videoTitle}\n\nIn the full implementation, this would open a video player modal with the actual video content.`);
+                });
+            });
         }
-        
-        // Initial adjustment
-        adjustAnimationSpeed();
-        
-        // Adjust on window resize
-        window.addEventListener('resize', adjustAnimationSpeed);
+
+        // Initialize video section if videos tab is active
+        if (document.querySelector('#videos.tab-pane.active')) {
+            initVideoSection();
+        }
+
+        // Video upload functionality
+        const videoUpload = document.getElementById('videoUpload');
+        const uploadArea = document.getElementById('videoUploadArea');
+        const uploadProgress = document.getElementById('uploadProgress');
+        const progressBar = uploadProgress.querySelector('.progress-bar');
+        const uploadStatus = document.getElementById('uploadStatus');
+
+        if (uploadArea) {
+            uploadArea.addEventListener('click', function() {
+                videoUpload.click();
+            });
+
+            videoUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    // Check file type
+                    const validTypes = ['video/mp4', 'video/quicktime', 'video/x-msvideo'];
+                    if (!validTypes.includes(file.type)) {
+                        alert('Please select a valid video file (MP4, MOV, or AVI)');
+                        return;
+                    }
+
+                    // Check file size (100MB limit)
+                    if (file.size > 100 * 1024 * 1024) {
+                        alert('File size must be less than 100MB');
+                        return;
+                    }
+
+                    // Simulate upload process
+                    uploadProgress.style.display = 'block';
+                    progressBar.style.width = '0%';
+                    uploadStatus.textContent = 'Preparing upload...';
+
+                    // Simulate upload progress
+                    let progress = 0;
+                    const interval = setInterval(() => {
+                        progress += Math.random() * 10;
+                        if (progress >= 100) {
+                            progress = 100;
+                            clearInterval(interval);
+                            
+                            progressBar.style.width = '100%';
+                            uploadStatus.textContent = 'Upload complete! Processing video...';
+                            
+                            // Simulate processing
+                            setTimeout(() => {
+                                uploadStatus.textContent = 'Video uploaded successfully! It will appear after review.';
+                                progressBar.classList.remove('progress-bar-animated');
+                                progressBar.classList.remove('progress-bar-striped');
+                                progressBar.classList.add('bg-success');
+                                
+                                // Reset after 3 seconds
+                                setTimeout(() => {
+                                    uploadProgress.style.display = 'none';
+                                    progressBar.classList.remove('bg-success');
+                                    progressBar.classList.add('progress-bar-animated');
+                                    progressBar.classList.add('progress-bar-striped');
+                                    videoUpload.value = '';
+                                }, 3000);
+                            }, 1000);
+                        } else {
+                            progressBar.style.width = progress + '%';
+                            uploadStatus.textContent = `Uploading... ${Math.round(progress)}%`;
+                        }
+                    }, 200);
+                }
+            });
+
+            // Drag and drop for video upload
+            uploadArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                this.style.background = 'rgba(111, 25, 142, 0.1)';
+            });
+
+            uploadArea.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                this.style.background = '';
+            });
+
+            uploadArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                this.style.background = '';
+                
+                if (e.dataTransfer.files.length) {
+                    videoUpload.files = e.dataTransfer.files;
+                    videoUpload.dispatchEvent(new Event('change'));
+                }
+            });
+        }
+
+        // Adjust animation speeds based on screen size
+        function adjustGalleryAnimations() {
+            const isMobile = window.innerWidth < 768;
+            const galleryTracks = document.querySelectorAll('.gallery-track');
+            
+            galleryTracks.forEach(track => {
+                if (isMobile) {
+                    if (track.classList.contains('top-row')) {
+                        track.style.animationDuration = '30s';
+                    } else if (track.classList.contains('bottom-row')) {
+                        track.style.animationDuration = '25s';
+                    }
+                } else {
+                    if (track.classList.contains('top-row')) {
+                        track.style.animationDuration = '40s';
+                    } else if (track.classList.contains('bottom-row')) {
+                        track.style.animationDuration = '35s';
+                    }
+                }
+            });
+        }
+
+        // Initialize and adjust on resize
+        adjustGalleryAnimations();
+        window.addEventListener('resize', adjustGalleryAnimations);
     });
 </script>
 
-
-<!-- Add this section after the Gallery section and before the Contact section -->
-<!-- Add this section after the Gallery section and before the Contact section -->
 <!-- Constitution CTA Section -->
 <div class="container-xxl py-5" id="constitution">
     <div class="container">
